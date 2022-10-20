@@ -2,6 +2,8 @@ module goravel
 
 go 1.19
 
+replace github.com/sujit-baniya/framework => ../framework
+
 require github.com/sujit-baniya/framework v1.0.1
 
 require (
@@ -24,6 +26,7 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.8.1 // indirect
+	github.com/go-chi/chi/v5 v5.0.7 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.1 // indirect
@@ -122,8 +125,8 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/mysql v1.4.3 // indirect
-	gorm.io/driver/postgres v1.4.4 // indirect
+	gorm.io/driver/postgres v1.4.5 // indirect
 	gorm.io/driver/sqlite v1.4.3 // indirect
 	gorm.io/driver/sqlserver v1.4.1 // indirect
-	gorm.io/gorm v1.24.0 // indirect
+	gorm.io/gorm v1.24.1-0.20221019064659-5dd2bb482755 // indirect
 )

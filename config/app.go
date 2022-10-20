@@ -69,8 +69,9 @@ func init() {
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
 			// &route.ServiceProvider{Engine: route.NewFiber()},
-			// &route.ServiceProvider{Engine: route.NewGin()},
-			&route.ServiceProvider{}, // Default Gin is used
+			&route.ServiceProvider{Engine: route.NewGin()},
+			// &route.ServiceProvider{Engine: route.NewChi()},
+			// &route.ServiceProvider{}, // Default Gin is used
 			&schedule.ServiceProvider{},
 			&event.ServiceProvider{},
 			&queue.ServiceProvider{},

@@ -11,5 +11,6 @@ type Kernel struct {
 func (kernel *Kernel) Middleware() []http.HandlerFunc {
 	return []http.HandlerFunc{
 		middleware.Cors(),
+		// appMiddleware.Test(),
 	}
 }

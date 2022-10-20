@@ -16,6 +16,6 @@ func NewUserController() *UserController {
 
 func (r *UserController) Show(ctx http.Context) error {
 	return ctx.Response().Success().Json(http.Json{
-		"Hello": ctx.Request().Params("id"),
+		"Hello": ctx.Params("id"),
 	})
 }
