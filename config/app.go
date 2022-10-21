@@ -23,7 +23,7 @@ func Boot() {}
 
 func init() {
 	config := facades.Config
-	config.Add("app", map[string]interface{}{
+	config.Add("app", map[string]any{
 		//Application Name
 		//This value is the name of your application. This value is used when the
 		//framework needs to place the application's name in a notification or
@@ -69,9 +69,9 @@ func init() {
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
 			// &route.ServiceProvider{Engine: route.NewFiber()},
-			&route.ServiceProvider{Engine: route.NewGin()},
+			// &route.ServiceProvider{Engine: route.NewGin()},
 			// &route.ServiceProvider{Engine: route.NewChi()},
-			// &route.ServiceProvider{}, // Default Gin is used
+			&route.ServiceProvider{}, // Default Gin is used
 			&schedule.ServiceProvider{},
 			&event.ServiceProvider{},
 			&queue.ServiceProvider{},

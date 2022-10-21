@@ -2,19 +2,23 @@ package routes
 
 import (
 	"github.com/sujit-baniya/framework/contracts/http"
-	"github.com/sujit-baniya/framework/facades"
-	"goravel/app/http/middleware"
-
+	"github.com/sujit-baniya/framework/contracts/route"
+	"github.com/sujit-baniya/framework/http/middleware"
+	"github.com/sujit-baniya/framework/http/middleware/limiter"
 	"goravel/app/http/controllers"
 )
 
-func Web() {
-	facades.Route.Get("/", func(ctx http.Context) error {
+func Web(route route.Route) {
+	userController := controllers.NewUserController()
+	route.Get("/", middleware.RequestID(), limiter.New(), func(ctx http.Context) error {
 		return ctx.Response().Json(200, http.Json{
 			"Hello": "Goravel",
 		})
 	})
 
-	userController := controllers.NewUserController()
-	facades.Route.Get("/users/{id}", middleware.Test(), userController.Show)
+	route.Get("/users/{id}", middleware.BasicAuth(middleware.ConfigBasicAuth{
+		Users: map[string]string{
+			"john": "doe",
+		},
+	}), userController.Show)
 }

@@ -18,6 +18,14 @@ func (receiver *RouteServiceProvider) Register() {
 	kernel := http.Kernel{}
 	facades.Route.GlobalMiddleware(kernel.Middleware()...)
 
-	//Add routes
-	routes.Web()
+	//Add web routes
+	webRoutes := facades.Route.Middleware(kernel.Web()...)
+	routes.Web(webRoutes)
+
+	//Add api routes
+	apiRoutes := facades.Route.
+		Middleware(kernel.Api()...).
+		Prefix(facades.Config.GetString("api.prefix")).
+		Prefix(facades.Config.GetString("api.version"))
+	routes.Api(apiRoutes)
 }
