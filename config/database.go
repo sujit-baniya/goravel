@@ -6,13 +6,13 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("database", map[string]any{
+	config.Add("database", map[string]interface{}{
 		//Default database connection name, only support Mysql now.
 		"default": config.Env("DB_CONNECTION", "mysql"),
 
 		//Database connections
-		"connections": map[string]any{
-			"mysql": map[string]any{
+		"connections": map[string]interface{}{
+			"mysql": map[string]interface{}{
 				"driver":   "mysql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", "3306"),
@@ -22,7 +22,7 @@ func init() {
 				"charset":  "utf8mb4",
 				"loc":      "Local",
 			},
-			"postgresql": map[string]any{
+			"postgresql": map[string]interface{}{
 				"driver":   "postgresql",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", "3306"),
@@ -32,11 +32,11 @@ func init() {
 				"sslmode":  "disable",
 				"timezone": "UTC", //Asia/Shanghai
 			},
-			"sqlite": map[string]any{
+			"sqlite": map[string]interface{}{
 				"driver":   "sqlite",
 				"database": config.Env("DB_DATABASE", "forge"),
 			},
-			"sqlserver": map[string]any{
+			"sqlserver": map[string]interface{}{
 				"driver":   "sqlserver",
 				"host":     config.Env("DB_HOST", "127.0.0.1"),
 				"port":     config.Env("DB_PORT", "3306"),
@@ -57,8 +57,8 @@ func init() {
 		//Redis is an open source, fast, and advanced key-value store that also
 		//provides a richer body of commands than a typical key-value system
 		//such as APC or Memcached.
-		"redis": map[string]any{
-			"default": map[string]any{
+		"redis": map[string]interface{}{
+			"default": map[string]interface{}{
 				"host":     config.Env("REDIS_HOST", ""),
 				"password": config.Env("REDIS_PASSWORD", ""),
 				"port":     config.Env("REDIS_PORT", 6379),

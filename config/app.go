@@ -1,6 +1,7 @@
 package config
 
 import (
+	"github.com/sujit-baniya/framework/auth"
 	"github.com/sujit-baniya/framework/cache"
 	"github.com/sujit-baniya/framework/console"
 	"github.com/sujit-baniya/framework/contracts"
@@ -23,7 +24,7 @@ func Boot() {}
 
 func init() {
 	config := facades.Config
-	config.Add("app", map[string]any{
+	config.Add("app", map[string]interface{}{
 		//Application Name
 		//This value is the name of your application. This value is used when the
 		//framework needs to place the application's name in a notification or
@@ -77,6 +78,7 @@ func init() {
 			&queue.ServiceProvider{},
 			&grpc.ServiceProvider{},
 			&mail.ServiceProvider{},
+			&auth.ServiceProvider{},
 			&providers.AppServiceProvider{},
 			&providers.RouteServiceProvider{},
 			&providers.GrpcServiceProvider{},

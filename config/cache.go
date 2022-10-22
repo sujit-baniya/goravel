@@ -6,7 +6,7 @@ import (
 
 func init() {
 	config := facades.Config
-	config.Add("cache", map[string]any{
+	config.Add("cache", map[string]interface{}{
 		//Default Cache Store
 		//This option controls the default cache connection that gets used while
 		//using this caching library. This connection is used when another is
@@ -18,8 +18,8 @@ func init() {
 		//well as their drivers. You may even define multiple stores for the
 		//same cache driver to group types of items stored in your caches.
 		//Available Drivers: "redis", "custom"
-		"stores": map[string]any{
-			"redis": map[string]any{
+		"stores": map[string]interface{}{
+			"redis": map[string]interface{}{
 				"driver":     "redis",
 				"connection": "default",
 			},
