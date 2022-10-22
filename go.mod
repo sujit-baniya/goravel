@@ -22,7 +22,7 @@ require (
 	github.com/aws/aws-sdk-go v1.37.16 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
-	github.com/denisenkom/go-mssqldb v0.12.0 // indirect
+	github.com/denisenkom/go-mssqldb v0.12.3 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -74,7 +74,6 @@ require (
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mattn/go-sqlite3 v1.14.14 // indirect
-	github.com/microsoft/go-mssqldb v0.17.0 // indirect
 	github.com/mitchellh/mapstructure v1.4.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
@@ -93,7 +92,7 @@ require (
 	github.com/streadway/amqp v1.0.0 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/sujit-baniya/log v1.0.66 // indirect
-	github.com/sujit-baniya/migrate v0.0.2 // indirect
+	github.com/sujit-baniya/migrate v0.0.3 // indirect
 	github.com/sujit-baniya/xid v1.2.3 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
 	github.com/urfave/cli/v2 v2.3.0 // indirect
