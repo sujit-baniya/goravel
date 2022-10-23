@@ -24,8 +24,8 @@ func (receiver *RouteServiceProvider) Register() {
 
 	//Add api routes
 	apiRoutes := facades.Route.
-		Middleware(kernel.Api()...).
-		Prefix(facades.Config.GetString("api.prefix")).
-		Prefix(facades.Config.GetString("api.version"))
+		Prefix(facades.Config.GetString("api.prefix") + "/" + facades.Config.GetString("api.version")).
+		Middleware(kernel.Api()...)
+
 	routes.Api(apiRoutes)
 }

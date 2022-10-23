@@ -69,10 +69,10 @@ func init() {
 			&database.ServiceProvider{},
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
-			&route.ServiceProvider{Engine: route.NewFiber()},
+			// &route.ServiceProvider{Engine: route.NewFiber()},
 			// &route.ServiceProvider{Engine: route.NewGin()},
 			// &route.ServiceProvider{Engine: route.NewChi()},
-			// &route.ServiceProvider{}, // Default Gin is used
+			&route.ServiceProvider{}, // Default Chi is used: https://github.com/sujit-baniya/chi
 			&schedule.ServiceProvider{},
 			&event.ServiceProvider{},
 			&queue.ServiceProvider{},
