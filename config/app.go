@@ -72,7 +72,7 @@ func init() {
 			// &route.ServiceProvider{Engine: route.NewFiber()},
 			// &route.ServiceProvider{Engine: route.NewGin()},
 			// &route.ServiceProvider{Engine: route.NewChi()},
-			&route.ServiceProvider{}, // Default Chi is used: https://github.com/sujit-baniya/chi
+			&route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
 			&schedule.ServiceProvider{},
 			&event.ServiceProvider{},
 			&queue.ServiceProvider{},

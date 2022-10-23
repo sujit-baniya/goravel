@@ -1,9 +1,7 @@
 <p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
 
-English
-
 Forked https://github.com/goravel/framework
-With support to switch between [Gin](https://gin-gonic.com/) and [GoFiber](https://gofiber.io/)
+With support to switch between [Gin](https://gin-gonic.com/), [Chi](https://github.com/sujit-baniya/chi) and [GoFiber](https://gofiber.io/)
 
 ## Switch between Gin or GoFiber
 In `config/app.go`, in ServiceProvider list change `route.ServiceProvider` accordingly as
@@ -11,9 +9,10 @@ In `config/app.go`, in ServiceProvider list change `route.ServiceProvider` accor
 ```go
     "providers": []contracts.ServiceProvider{
         ...
-        // &route.ServiceProvider{Engine: route.NewFiber()},
-        // &route.ServiceProvider{Engine: route.NewGin()},
-        &route.ServiceProvider{}, // Default Gin is used
+		// &route.ServiceProvider{Engine: route.NewFiber()},
+		// &route.ServiceProvider{Engine: route.NewGin()},
+		// &route.ServiceProvider{Engine: route.NewChi()},
+		&route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
         ...
     },
 ```
