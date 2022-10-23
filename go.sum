@@ -547,6 +547,8 @@ github.com/sujit-baniya/chi v0.0.3 h1:K+TcEyWtQmEEq3eNvGTyrIDYIv8lTsKKRObWpWt+T/
 github.com/sujit-baniya/chi v0.0.3/go.mod h1:NrFI82t1Ub2T+Bt2tC7PsOb+spa0BXDxM1J0X4Mkqqw=
 github.com/sujit-baniya/framework v1.0.5 h1:fU6qm0sLrl5+M6V1Nwx/rDnBThKNV5a/+4adwJfWQY0=
 github.com/sujit-baniya/framework v1.0.5/go.mod h1:iz7FST6AQWsi1GLVZr3JZSX/ZIiLzui961t96wG5tgw=
+github.com/sujit-baniya/framework v1.0.6 h1:z27OZgF5t8oQ/mJGc/MzV6rftDsxurTvQ/zn1pN/3AQ=
+github.com/sujit-baniya/framework v1.0.6/go.mod h1:iz7FST6AQWsi1GLVZr3JZSX/ZIiLzui961t96wG5tgw=
 github.com/sujit-baniya/log v1.0.66 h1:kb90o6Edk6CvbuQ8vyYdPl4aChAvHJL2MztxJDdl7u8=
 github.com/sujit-baniya/log v1.0.66/go.mod h1:zTK5eCSq6VhqsSUcIqr4nUfT8E1WzojBSAWeHihOfbw=
 github.com/sujit-baniya/migrate v0.0.4 h1:aY2jdvGRaHSbUFILnStUO117ugF04CV+Rq3TYvkTDU0=

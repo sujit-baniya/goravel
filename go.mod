@@ -2,7 +2,7 @@ module goravel
 
 go 1.19
 
-require github.com/sujit-baniya/framework v1.0.5
+require github.com/sujit-baniya/framework v1.0.6
 
 require (
 	cloud.google.com/go v0.104.0 // indirect
