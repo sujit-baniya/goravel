@@ -2,7 +2,9 @@ module goravel
 
 go 1.19
 
-require github.com/sujit-baniya/framework v1.0.5
+replace github.com/sujit-baniya/framework => ../framework
+
+require github.com/sujit-baniya/framework v1.0.7
 
 require (
 	cloud.google.com/go v0.104.0 // indirect
@@ -32,6 +34,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/goccy/go-json v0.9.11 // indirect
 	github.com/gofiber/fiber/v2 v2.39.0 // indirect
+	github.com/gofiber/template v1.7.1 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
@@ -95,6 +98,7 @@ require (
 	github.com/streadway/amqp v1.0.0 // indirect
 	github.com/subosito/gotenv v1.4.1 // indirect
 	github.com/sujit-baniya/chi v0.0.3 // indirect
+	github.com/sujit-baniya/fiber-view v0.0.3 // indirect
 	github.com/sujit-baniya/log v1.0.66 // indirect
 	github.com/sujit-baniya/migrate v0.0.4 // indirect
 	github.com/sujit-baniya/xid v1.2.3 // indirect
