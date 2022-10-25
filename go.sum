@@ -518,8 +518,6 @@ github.com/subosito/gotenv v1.4.1 h1:jyEFiXpy21Wm81FBN71l9VoMMV8H8jG+qIK3GCpY6Qs
 github.com/subosito/gotenv v1.4.1/go.mod h1:ayKnFf/c6rvx/2iiLrJUk1e6plDbT3edrFNGqEflhK0=
 github.com/sujit-baniya/chi v0.0.3 h1:K+TcEyWtQmEEq3eNvGTyrIDYIv8lTsKKRObWpWt+T/U=
 github.com/sujit-baniya/chi v0.0.3/go.mod h1:NrFI82t1Ub2T+Bt2tC7PsOb+spa0BXDxM1J0X4Mkqqw=
-github.com/sujit-baniya/framework v1.0.11 h1:X9DeYm+vWUU3xze/gI5Rkxt3PbzXHYav+abLIGcsz04=
-github.com/sujit-baniya/framework v1.0.11/go.mod h1:KGOxMywI3UO7mU6Cvat+whJDe5ayVa0+51NI3j2Hmco=
 github.com/sujit-baniya/middleware v0.0.3 h1:SjODMQmANWxzHGwqGcmn+8hE0uRVjNnSdTRU0tWmVLI=
 github.com/sujit-baniya/middleware v0.0.3/go.mod h1:REovaNcljL3VXI8z9Q2ssqSKHQHLNI7m9iPqKvN7bWQ=
 github.com/sujit-baniya/migrate v0.0.4 h1:aY2jdvGRaHSbUFILnStUO117ugF04CV+Rq3TYvkTDU0=
@@ -930,8 +928,8 @@ google.golang.org/genproto v0.0.0-20201214200347-8c77b98c765d/go.mod h1:FWY/as6D
 google.golang.org/genproto v0.0.0-20210108203827-ffc7fda8c3d7/go.mod h1:FWY/as6DDZQgahTzZj3fqbO1CbirC29ZNUFHwi0/+no=
 google.golang.org/genproto v0.0.0-20210207032614-bba0dbe2a9ea/go.mod h1:FWY/as6DDZQgahTzZj3fqbO1CbirC29ZNUFHwi0/+no=
 google.golang.org/genproto v0.0.0-20210226172003-ab064af71705/go.mod h1:FWY/as6DDZQgahTzZj3fqbO1CbirC29ZNUFHwi0/+no=
-google.golang.org/genproto v0.0.0-20221024183307-1bc688fe9f3e h1:S9GbmC1iCgvbLyAokVCwiO6tVIrU9Y7c5oMx1V/ki/Y=
-google.golang.org/genproto v0.0.0-20221024183307-1bc688fe9f3e/go.mod h1:9qHF0xnpdSfF6knlcsnpzUu5y+rpwgbvsyGAZPBMg4s=
+google.golang.org/genproto v0.0.0-20221025140454-527a21cfbd71 h1:GEgb2jF5zxsFJpJfg9RoDDWm7tiwc/DDSTE2BtLUkXU=
+google.golang.org/genproto v0.0.0-20221025140454-527a21cfbd71/go.mod h1:9qHF0xnpdSfF6knlcsnpzUu5y+rpwgbvsyGAZPBMg4s=
 google.golang.org/grpc v1.19.0/go.mod h1:mqu4LbDTu4XGKhr4mRzUsmM4RtVoemTSY81AxZiDr8c=
 google.golang.org/grpc v1.20.1/go.mod h1:10oTOabMzJvdu6/UiuZezV6QK5dSlG84ov/aaiqXj38=
 google.golang.org/grpc v1.21.1/go.mod h1:oYelfM1adQP15Ek0mdvEgi9Df8B9CZIaU1084ijfRaM=
