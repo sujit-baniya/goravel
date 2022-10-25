@@ -10,7 +10,7 @@ import (
 func Web(route route.Route) {
 	userController := controllers.NewUserController()
 	route.Get("/", func(ctx http.Context) error {
-		return ctx.Response().Render("index", map[string]any{
+		return ctx.Render("index", map[string]any{
 			"title": "This is test page",
 		}, "layouts/master")
 	})

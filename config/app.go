@@ -16,7 +16,6 @@ import (
 	"github.com/sujit-baniya/framework/route"
 	"github.com/sujit-baniya/framework/schedule"
 	"github.com/sujit-baniya/framework/view"
-
 	"goravel/app/providers"
 )
 
@@ -74,10 +73,12 @@ func init() {
 			/*&route.ServiceProvider{Engine: route.NewFiber(fiber.Config{
 				Views: view.New("resources/views", ".html"),
 			})},*/
-			&route.ServiceProvider{Engine: route.NewGin(http.GinConfig{
+			/*&route.ServiceProvider{Engine: route.NewGin(http.GinConfig{
+				View: view.New("resources/views", ".html"),
+			})},*/
+			&route.ServiceProvider{Engine: route.NewChi(http.ChiConfig{
 				View: view.New("resources/views", ".html"),
 			})},
-			// &route.ServiceProvider{Engine: route.NewChi()},
 			// &route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
 
 			&schedule.ServiceProvider{},
