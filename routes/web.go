@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/sujit-baniya/framework/contracts/http"
 	"github.com/sujit-baniya/framework/contracts/route"
-	"github.com/sujit-baniya/framework/http/middleware"
+	"github.com/sujit-baniya/middleware"
 	"goravel/app/http/controllers"
 )
 

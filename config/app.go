@@ -1,6 +1,7 @@
 package config
 
 import (
+	// "github.com/sujit-baniya/fiberRoute"
 	"github.com/sujit-baniya/framework/auth"
 	"github.com/sujit-baniya/framework/cache"
 	"github.com/sujit-baniya/framework/console"
@@ -16,6 +17,8 @@ import (
 	"github.com/sujit-baniya/framework/route"
 	"github.com/sujit-baniya/framework/schedule"
 	"github.com/sujit-baniya/framework/view"
+
+	// "github.com/sujit-baniya/ginRoute"
 	"goravel/app/providers"
 )
 
@@ -70,10 +73,10 @@ func init() {
 			&cache.ServiceProvider{},
 			&http.ServiceProvider{},
 
-			/*&route.ServiceProvider{Engine: route.NewFiber(fiber.Config{
+			/*&route.ServiceProvider{Engine: fiberRoute.New(fiber.Config{
 				Views: view.New("resources/views", ".html"),
 			})},*/
-			/*&route.ServiceProvider{Engine: route.NewGin(http.GinConfig{
+			/*&route.ServiceProvider{Engine: ginRoute.New(ginRoute.Config{
 				View: view.New("resources/views", ".html"),
 			})},*/
 			&route.ServiceProvider{Engine: route.NewChi(http.ChiConfig{

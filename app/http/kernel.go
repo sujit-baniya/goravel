@@ -2,7 +2,7 @@ package http
 
 import (
 	"github.com/sujit-baniya/framework/contracts/http"
-	"github.com/sujit-baniya/framework/http/middleware"
+	"github.com/sujit-baniya/middleware"
 )
 
 type Kernel struct{}
