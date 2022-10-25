@@ -62,6 +62,8 @@ func init() {
 
 		"grpc_host": config.Env("GRPC_HOST", ""),
 
+		"public_dir": config.Env("PUBLIC_DIR", "public"),
+
 		//Autoload service providers
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to

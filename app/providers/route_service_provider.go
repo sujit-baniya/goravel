@@ -20,6 +20,7 @@ func (receiver *RouteServiceProvider) Register() {
 
 	//Add web routes
 	webRoutes := facades.Route.Middleware(kernel.Web()...)
+	webRoutes.Static("/", facades.Config.GetString("app.public_dir"))
 	routes.Web(webRoutes)
 
 	//Add api routes

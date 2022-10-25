@@ -2,6 +2,8 @@ module goravel
 
 go 1.19
 
+replace github.com/sujit-baniya/framework => ../framework
+
 require (
 	github.com/sujit-baniya/framework v1.0.11
 	github.com/sujit-baniya/middleware v0.0.3
