@@ -1,18 +1,31 @@
 <p align="center"><img src="https://goravel.s3.us-east-2.amazonaws.com/goravel-word.png" width="300"></p>
 
 Forked https://github.com/goravel/framework
-With support to switch between [Gin](https://gin-gonic.com/), [Chi](https://github.com/sujit-baniya/chi) and [GoFiber](https://gofiber.io/)
+With support to switch between [Gin](https://gin-gonic.com/), [Chi](https://github.com/sujit-baniya/chi) and [GoFiber](https://gofiber.io/) along with following features supported.
 
-## Switch between Gin or GoFiber
+## Additional Features
+- Switable Routers (Currently Chi, Go-Gonic and Gofiber)
+- Support for template engine for views (Currently `html/template` supported)
+- Support for static files
+- Change in API for context, request and response to support various routers in future.
+- Introduction of routes for Web and API including inline middlewares for routes.
+
+## Switch between Chi, Gin or GoFiber
 In `config/app.go`, in ServiceProvider list change `route.ServiceProvider` accordingly as
 
 ```go
     "providers": []contracts.ServiceProvider{
         ...
-		// &route.ServiceProvider{Engine: route.NewFiber()},
-		// &route.ServiceProvider{Engine: route.NewGin()},
-		// &route.ServiceProvider{Engine: route.NewChi()},
-		&route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
+			/*&route.ServiceProvider{Engine: fiberRoute.New(fiber.Config{
+				Views: view.New("resources/views", ".html"),
+			})},*/
+			/*&route.ServiceProvider{Engine: ginRoute.New(ginRoute.Config{
+				View: view.New("resources/views", ".html"),
+			})},*/
+			&route.ServiceProvider{Engine: route.NewChi(http.ChiConfig{
+				View: view.New("resources/views", ".html"),
+			})},
+			// &route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
         ...
     },
 ```
