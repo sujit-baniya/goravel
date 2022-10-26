@@ -16,7 +16,7 @@ import (
 	"github.com/sujit-baniya/framework/queue"
 	"github.com/sujit-baniya/framework/route"
 	"github.com/sujit-baniya/framework/schedule"
-	"github.com/sujit-baniya/framework/view"
+	"goravel/app/helpers"
 
 	// "github.com/sujit-baniya/ginRoute"
 	"goravel/app/providers"
@@ -64,6 +64,8 @@ func init() {
 
 		"public_dir": config.Env("PUBLIC_DIR", "public"),
 
+		"router": config.Env("DEFAULT_ROUTER", "chi"),
+
 		//Autoload service providers
 		//The service providers listed here will be automatically loaded on the
 		//request to your application. Feel free to add your own services to
@@ -81,9 +83,12 @@ func init() {
 			/*&route.ServiceProvider{Engine: ginRoute.New(ginRoute.Config{
 				View: view.New("resources/views", ".html"),
 			})},*/
-			&route.ServiceProvider{Engine: route.NewChi(http.ChiConfig{
-				View: view.New("resources/views", ".html"),
-			})},
+			&route.ServiceProvider{Engine: helpers.GetRouter(
+				config.Env("DEFAULT_ROUTER", "chi").(string),
+				config.Env("VIEW_TEMPLATE", "resources/views").(string),
+				config.Env("VIEW_FILE_EXTENSION", ".html").(string),
+				"",
+			)},
 			// &route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
 
 			&schedule.ServiceProvider{},

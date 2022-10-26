@@ -23,6 +23,10 @@ func init() {
 				"driver":     "redis",
 				"connection": "default",
 			},
+			"memory": map[string]interface{}{
+				"driver":     "memory",
+				"connection": "default",
+			},
 		},
 
 		//Cache Key Prefix
