@@ -8,11 +8,8 @@ import (
 )
 
 func Web(route route.Route) {
-	// route.Static("/", "public")
-	// route.StaticFile("/test.html", "public/logo.png")
 	userController := controllers.NewUserController()
 	route.Get("/", func(ctx http.Context) error {
-		ctx.AbortWithStatus(500)
 		return ctx.Render("index", map[string]any{
 			"title": "This is test page",
 		}, "layouts/master")

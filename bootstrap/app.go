@@ -8,9 +8,9 @@ import (
 func Boot() {
 	app := foundation.Application{}
 
-	//Bootstrap the application
-	app.Boot()
-
 	//Bootstrap the config.
 	config.Boot()
+
+	//Bootstrap the application
+	app.Boot()
 }
