@@ -6,11 +6,8 @@ import (
 )
 
 func Boot() {
-	app := foundation.Application{}
-
-	//Bootstrap the config.
 	config.Boot()
 
-	//Bootstrap the application
+	app := foundation.Application{Providers: config.Providers()}
 	app.Boot()
 }

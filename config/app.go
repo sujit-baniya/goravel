@@ -1,7 +1,6 @@
 package config
 
 import (
-	// "github.com/sujit-baniya/fiberRoute"
 	"github.com/sujit-baniya/framework/auth"
 	"github.com/sujit-baniya/framework/cache"
 	"github.com/sujit-baniya/framework/console"
@@ -17,8 +16,6 @@ import (
 	"github.com/sujit-baniya/framework/route"
 	"github.com/sujit-baniya/framework/schedule"
 	"goravel/app/helpers"
-
-	// "github.com/sujit-baniya/ginRoute"
 	"goravel/app/providers"
 )
 
@@ -65,44 +62,32 @@ func init() {
 		"public_dir": config.Env("PUBLIC_DIR", "public"),
 
 		"router": config.Env("DEFAULT_ROUTER", "chi"),
-
-		//Autoload service providers
-		//The service providers listed here will be automatically loaded on the
-		//request to your application. Feel free to add your own services to
-		//this array to grant expanded functionality to your applications.
-		"providers": []contracts.ServiceProvider{
-			&log.ServiceProvider{},
-			&console.ServiceProvider{},
-			&database.ServiceProvider{},
-			&cache.ServiceProvider{},
-			&http.ServiceProvider{},
-
-			/*&route.ServiceProvider{Engine: fiberRoute.New(fiber.Config{
-				Views: view.New("resources/views", ".html"),
-			})},*/
-			/*&route.ServiceProvider{Engine: ginRoute.New(ginRoute.Config{
-				View: view.New("resources/views", ".html"),
-			})},*/
-			&route.ServiceProvider{Engine: helpers.GetRouter(
-				config.Env("DEFAULT_ROUTER", "chi").(string),
-				config.Env("VIEW_TEMPLATE", "resources/views").(string),
-				config.Env("VIEW_FILE_EXTENSION", ".html").(string),
-				"",
-			)},
-			// &route.ServiceProvider{}, // Default Chi (standard net/http) is used: https://github.com/sujit-baniya/chi
-
-			&schedule.ServiceProvider{},
-			&event.ServiceProvider{},
-			&queue.ServiceProvider{},
-			&grpc.ServiceProvider{},
-			&mail.ServiceProvider{},
-			&auth.ServiceProvider{},
-			&providers.AppServiceProvider{},
-			&providers.RouteServiceProvider{},
-			&providers.GrpcServiceProvider{},
-			&providers.ConsoleServiceProvider{},
-			&providers.QueueServiceProvider{},
-			&providers.EventServiceProvider{},
-		},
 	})
+}
+
+// Providers Autoload service providers
+// The service providers listed here will be automatically loaded on the
+// request to your application. Feel free to add your own services to
+// this array to grant expanded functionality to your applications.
+func Providers() []contracts.ServiceProvider {
+	return []contracts.ServiceProvider{
+		&log.ServiceProvider{},
+		&console.ServiceProvider{},
+		&database.ServiceProvider{},
+		&cache.ServiceProvider{Store: helpers.GetCache()},
+		&http.ServiceProvider{},
+		&route.ServiceProvider{Engine: helpers.GetRouter()},
+		&schedule.ServiceProvider{},
+		&event.ServiceProvider{},
+		&queue.ServiceProvider{},
+		&grpc.ServiceProvider{},
+		&mail.ServiceProvider{},
+		&auth.ServiceProvider{},
+		&providers.AppServiceProvider{},
+		&providers.RouteServiceProvider{},
+		&providers.GrpcServiceProvider{},
+		&providers.ConsoleServiceProvider{},
+		&providers.QueueServiceProvider{},
+		&providers.EventServiceProvider{},
+	}
 }

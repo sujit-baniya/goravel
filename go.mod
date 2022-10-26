@@ -2,12 +2,16 @@ module goravel
 
 go 1.19
 
+replace github.com/sujit-baniya/framework => ../framework
+
 require (
 	github.com/gofiber/fiber/v2 v2.39.0
+	github.com/gookit/color v1.5.2
 	github.com/sujit-baniya/fiberRoute v0.0.2
 	github.com/sujit-baniya/framework v1.0.14
 	github.com/sujit-baniya/ginRoute v0.0.2
 	github.com/sujit-baniya/middleware v0.0.5
+	github.com/sujit-baniya/redisCache v0.0.2
 )
 
 require (
@@ -48,7 +52,6 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.6.0 // indirect
-	github.com/gookit/color v1.5.2 // indirect
 	github.com/goravel/file-rotatelogs v0.0.0-20211215053220-2ab31dd9575c // indirect
 	github.com/goravel/file-rotatelogs/v2 v2.4.1 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect

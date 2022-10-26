@@ -548,14 +548,14 @@ github.com/sujit-baniya/chi v0.0.3 h1:K+TcEyWtQmEEq3eNvGTyrIDYIv8lTsKKRObWpWt+T/
 github.com/sujit-baniya/chi v0.0.3/go.mod h1:NrFI82t1Ub2T+Bt2tC7PsOb+spa0BXDxM1J0X4Mkqqw=
 github.com/sujit-baniya/fiberRoute v0.0.2 h1:AelXH6ITvsT6yurYrky72yCL/2OBa2ZvgDim8pdARnw=
 github.com/sujit-baniya/fiberRoute v0.0.2/go.mod h1:plpTJQi2vuPZHkeWtuMCHcDf1hMeswUfMVSZVb/dbTY=
-github.com/sujit-baniya/framework v1.0.14 h1:1SUr6oJeVGthbVh9ntXLGF4riJg2p60v+aM1GyQA87Q=
-github.com/sujit-baniya/framework v1.0.14/go.mod h1:KGOxMywI3UO7mU6Cvat+whJDe5ayVa0+51NI3j2Hmco=
 github.com/sujit-baniya/ginRoute v0.0.2 h1:IH0OuJSIJz96nYYO3XbC3VmNXfN9roKVSID+N2fZYww=
 github.com/sujit-baniya/ginRoute v0.0.2/go.mod h1:xm1a6FjNP6w1SYD/yJqM6GDg8Nq4IXkkCTMT4hkdmdM=
 github.com/sujit-baniya/middleware v0.0.5 h1:vLpr6C9GsbTCs6HZaAyar6jXrRlQ8U2OMbAyhhhhtRI=
 github.com/sujit-baniya/middleware v0.0.5/go.mod h1:PxygMhy/t5tlDSYW5GoPFzcswANdh814RggpP1JkQT4=
 github.com/sujit-baniya/migrate v0.0.4 h1:aY2jdvGRaHSbUFILnStUO117ugF04CV+Rq3TYvkTDU0=
 github.com/sujit-baniya/migrate v0.0.4/go.mod h1:wLBYIgedLAi03k1W0425/OAEWgLeW9IW8ySQ7HnrNt4=
+github.com/sujit-baniya/redisCache v0.0.2 h1:aLOn/t/7NG56Y1G2YkiLBBEw3fNLstmasDcXHr+YIZw=
+github.com/sujit-baniya/redisCache v0.0.2/go.mod h1:JjiYqv5cHuHKQJtxJRSqFW4lEKgzSNyvctmKfPTKedQ=
 github.com/tebeka/strftime v0.1.3/go.mod h1:7wJm3dZlpr4l/oVK0t1HYIc4rMzQ2XJlOMIUJUJH6XQ=
 github.com/tidwall/pretty v1.0.0 h1:HsD+QiTn7sK6flMKIvNmpqz1qrpP3Ps6jOKIKMooyg4=
 github.com/tidwall/pretty v1.0.0/go.mod h1:XNkn88O1ChpSDQmQeStsy+sBenx6DDtFZJxhVysOjyk=
